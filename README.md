@@ -1,2 +1,3 @@
-# python-aufbau-kurs
-Python Training for SoftEd
+# Python Aufbautraining
+
+Python Training für SoftEd
