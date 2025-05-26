@@ -189,17 +189,19 @@ verhalten.
 ## Übungen
 
 1. **Negation:**  
+
    Ergänze die `Vector`-Klasse um die Methode `__neg__`, sodass `-v` einen negierten Vektor ergibt.
 
 2. **Dot-Product:**  
+
    Implementiere die Methode `dot(self, other)`, die das Skalarprodukt (dot product) zweier Vektoren
    berechnet, und ergänze zusätzlich `__matmul__` (`@`-Operator).
 
 3. **Repräsentation:**  
+
    Ergänze zusätzlich eine sinnvolle `__repr__`-Methode zur `Vector`-Klasse.
 
 4. **Hashbarkeit:**  
+
    Implementiere `__hash__`, sodass Vektoren als Schlüssel in Dictionaries verwendet werden können,
    wenn sie gleich sind.
-
----

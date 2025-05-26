@@ -1,4 +1,4 @@
-# Unterschied zwischen Klassenmethoden und statischen Methoden in Python
+# Klassenmethoden und statischen Methoden
 
 In Python sind **Klassenmethoden** (`@classmethod`) und **statische Methoden** (`@staticmethod`)
 spezielle Methodenarten, die sich in ihrer Funktionsweise und ihrem Anwendungsbereich

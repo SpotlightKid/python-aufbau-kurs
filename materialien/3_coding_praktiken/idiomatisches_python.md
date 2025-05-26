@@ -1,7 +1,7 @@
 # 10 Tipps für idiomatisches Python – Mit Beispielen
 
-Hier findest du 10 wichtige Tipps für "pythonic" (idiomatisches) Programmieren, sortiert nach 
-Wichtigkeit. Jeder Tipp hat ein Beispiel und eine kurze Erklärung.
+Hier findest du 10 wichtige Tipps für "pythonic" (idiomatisches) Programmieren.
+Jeder Tipp hat ein Beispiel und eine kurze Erklärung.
 
 ---
 
