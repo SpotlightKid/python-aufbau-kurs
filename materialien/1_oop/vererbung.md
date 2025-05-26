@@ -34,9 +34,9 @@ class Dog(Animal):
 
 # Usage
 animal = Animal("Generic animal")
-print(animal.name)            # Output: Generic animal
-print(animal.speak())         # Output: Some sound
-print(dog.__class__.__name__) # Output: Animal
+print(animal.name)               # Output: Generic animal
+print(animal.speak())            # Output: Some sound
+print(animal.__class__.__name__) # Output: Animal
 
 dog = Dog("Fifi")
 print(dog.name)               # Output: Fifi
@@ -54,6 +54,8 @@ Ein weiteres Beispiel für Vererbung mit einer Basisklasse `Person` und einer Un
 class Person:
 
     def __init__(self, name="", age=0, gender=None):
+        print(type(self))
+        print(self.__class__.__name__)
         self.name = name
         self.age = age
         self.gender = gender

@@ -15,7 +15,7 @@ Referenz-Dokumentation: https://docs.python.org/3/library/functions.html#propert
   werden.
 - **Validierung:** Setter können genutzt werden, um Werte vor der Zuweisung zu überprüfen.
 - **Konvertierung:** Setter können genutzt werden, um Werte vor der Zuweisung zu konvertieren.
-- **Dynaisierung:**
+- **Dynamisierung:**
     * Setter können verwendet werden, um abgeleitete Attribute automatisch beim Setzen einer
       Property zu berechnen und zu setzen.
     * Getter können verwendet werden, um Werte "on-demand" zu berechnen und zurückzugeben, z.B.

@@ -34,6 +34,8 @@ def add(a, b):
     """Adds two numbers."""
     return a + b
 
+print(add.__name__)
+
 add(2, 3)
 ```
 
