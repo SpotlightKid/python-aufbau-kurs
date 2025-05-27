@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Time Entries</h2>
+<table class="table">
+    <tr><th>Description</th><th>Duration (minutes)</th><th>Action</th></tr>
+    {% for entry in entries %}
+    <tr>
+        <td>{{ entry.description }}</td>
+        <td>{{ entry.duration }}</td>
+        <td>
+            <form action="{{ url_for('delete_entry', entry_id=entry.id) }}" method="post" style="display:inline;">
+                <button class="btn btn-danger btn-sm">Delete</button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<h3>Add Entry</h3>
+<form method="post" action="{{ url_for('add_entry') }}">
+    <input name="description" placeholder="Description" required>
+    <input name="duration" type="number" min="1" placeholder="Duration" required>
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Add Activity</h3>
+<form method="post" action="{{ url_for('add_activity') }}">
+    <input name="description" placeholder="Description" required>
+    <input name="start_time" type="datetime-local">
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
+<h2>Activities</h2>
+<table class="table">
+    <tr><th>Description</th><th>Start</th><th>End</th><th>Action</th></tr>
+    {% for act in activities %}
+    <tr>
+        <td>{{ act.description }}</td>
+        <td>{{ act.start_time }}</td>
+        <td>{{ act.end_time or "-" }}</td>
+        <td>
+            <div class="btn-group" role="group" aria-label="Actions">
+                {% if not act.end_time %}
+                <form action="{{ url_for('end_activity', activity_id=act.id) }}" method="post" style="display:inline;">
+                    <button class="btn btn-primary btn-sm" ata-bs-toggle="tooltip" title="Stop activity">
+                        <i class="bi bi-stop"></i>
+                    </button>
+                </form>
+                {% endif %}
+                <form action="{{ url_for('delete_activity', activity_id=act.id) }}" method="post" style="display:inline;">
+                    <button class="btn btn-danger btn-sm" data-bs-toggle="tooltip" title="Delete activity">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </form>
+            </div>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
