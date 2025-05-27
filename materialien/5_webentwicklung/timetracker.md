@@ -11,7 +11,9 @@ Funktion zum Hinzufügen von Einträgen und schließlich eine Funktion zum Lösc
 Installiere Flask, falls noch nicht geschehen:
 
 ```sh
-pip install flask
+python -m venv venv
+.\venv\Scripts\activate
+(venv) python -m pip install flask
 ```
 
 Erzeuge eine Datei `app.py` mit folgendem Inhalt:
@@ -32,7 +34,7 @@ if __name__ == '__main__':
 Starte die App mit:
 
 ```sh
-flask run --reload --debug
+(venv) flask run --reload --debug
 ```
 
 Öffne [http://localhost:5000/](http://localhost:5000/) im Browser.  
@@ -81,8 +83,7 @@ if __name__ == '__main__':
     app.run(debug=True)
 ```
 
-Starte die App erneut (wenn Du `--reload` und `--debug` verwendest, reicht es, die Seite im Browser neu zu laden).  
-Jetzt wird das HTML aus der Template-Datei angezeigt.
+Starte die App erneut (wenn Du `--reload` und `--debug` verwendest, reicht es, die Seite im Browser neu zu laden). Jetzt wird das HTML aus der Template-Datei angezeigt.
 
 ---
 

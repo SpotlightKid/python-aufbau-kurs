@@ -63,6 +63,7 @@ class Cat(Animal):
 # Usage:
 animal = Animal.create("cat")
 print(animal.speak())  # Meow!
+print(animal.__class__.__name__)  # Cat
 ```
 **Erklärung:**  
 Die Klassenmethode `create` erzeugt Objekte der passenden Unterklasse und kapselt die Logik.

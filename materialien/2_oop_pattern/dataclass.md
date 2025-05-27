@@ -122,4 +122,4 @@ print(p1 == p2)  # True, da id nicht verglichen wird
 2. Schreibe eine Dataclass `Book` mit Feldern `title`, `author` und `year`, alle als Strings.
 3. Passe die Dataclass `Person` so an, dass, wenn eine Liste von `Person`-Objekten sortiert wird, nur das Alter für die Sortierung berücksichtigt wird.
 
-   Hinweis: benutze `order=true` und `field(compare=False)` an den angemessenen Stellen im Code.
+   Hinweis: benutze `order=True` und `field(compare=False)` an den angemessenen Stellen im Code.
