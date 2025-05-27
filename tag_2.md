@@ -2,7 +2,7 @@
 
 ### Vormittag (9:00 - 12:00 Uhr)
 
-* OOP-Mechanismen, Pattern und Strategien (Teil 2)
+* OOP-Mechanismen, Pattern und Strategien (Teil 3)
     * [Datenklassen mit dem `dataclass`-Dekorator](./materialien/2_oop_pattern/dataclass.md)
     * [Das Factory-Pattern](./materialien/2_oop_pattern/factory-pattern.md)
 * Test-Driven Development
@@ -13,7 +13,7 @@
 
 ## Nachmittag (13:30 - 16:30 Uhr)
 
-* Web Development mit Flask (Teil 1)
+* Web Development mit Flask (Teil 2)
     * [Data Access Layer](./materialien/5_webentwicklung/dal.md)
     * [Time Tracker v2](./materialien/5_webentwicklung/timetracker_v2.md)
     * [Time Tracker REST API](./materialien/5_webentwicklung/timetracker_api.md)
