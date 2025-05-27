@@ -13,16 +13,18 @@ def extract_code_blocks(md_file, destdir=".", allowed_langs=None):
         content = f.read()
 
     # Regex for code blocks: ```lang filename=filename.ext ... ```
-    for i, (lang, filename, code) in enumerate(RX.findall(content)):
+    i = 0
+    for lang, filename, code in RX.findall(content):
         if allowed_langs and lang not in allowed_langs:
             continue
 
+        i += 1
         if not filename:
             bn = os.path.splitext(os.path.basename(md_file))[0]
             bn = bn.lower()
             bn = bn.replace("-", "_")
             bn = bn.replace(" ", "_")
-            filename = f"{bn}_ex_{i+1:02}.py"
+            filename = f"{bn}_ex_{i:02}.py"
         
         destfn = os.path.join(destdir, filename)
         os.makedirs(os.path.dirname(destfn), exist_ok=True)
