@@ -22,23 +22,12 @@ du das Paket mit den Tools [`build`](https://pypa-build.readthedocs.io/) und
 
 ---
 
-## 2. Neues Projektverzeichnis anlegen
-
-Lege ein neues Verzeichnis an und wechsle hinein:
-
-```sh
-mkdir myproject
-cd myproject
-```
-
----
-
-## 3. Das Projekt mit Hatch initialisieren
+## 2. Das Projekt mit Hatch initialisieren
 
 Starte die Initialisierung:
 
 ```sh
-hatch init
+hatch new -i
 ```
 
 Folge dem Dialog und gib z.B. `mypkg` als Namen für dein Package an, wenn dein Verzeichnis
@@ -46,14 +35,20 @@ so heißen soll.
 
 ---
 
-## 4. Projektstruktur prüfen
+## 43. Projektstruktur prüfen
 
-Nach der Initialisierung sieht die Struktur so aus:
+Nach der Initialisierung sieht die Struktur so aus (einige zusätzlich atein):
 
 ```
-myproject/
-├── mypkg/
+mypkg
+├── src
+│   └── mypkg
+│       ├── __about__.py
+│       └── __init__.py
+├── tests
 │   └── __init__.py
+├── LICENSE.txt
+├── README.md
 └── pyproject.toml
 ```
 

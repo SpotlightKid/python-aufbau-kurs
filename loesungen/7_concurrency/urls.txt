@@ -1,0 +1,5 @@
+https://www.google.com
+https://www.python.org
+https://httpstat.us/200?sleep=4000
+https://www.wikipedia.org
+https://thisdoesprobablynotexist.foo/

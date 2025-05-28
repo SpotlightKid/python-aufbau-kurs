@@ -1,0 +1,73 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "csvreader"
+dynamic = ["version"]
+description = 'A simple CSV reader module'
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Christopher Arndt", email = "chris@chrisarndt.de" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = []
+
+[project.urls]
+Documentation = "https://github.com/Christopher Arndt/csvreader#readme"
+Issues = "https://github.com/Christopher Arndt/csvreader/issues"
+Source = "https://github.com/Christopher Arndt/csvreader"
+
+[tool.hatch.version]
+path = "src/csvreader/__about__.py"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "src"
+]
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/csvreader tests}"
+
+[tool.coverage.run]
+source_pkgs = ["csvreader", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/csvreader/__about__.py",
+]
+
+[tool.coverage.paths]
+csvreader = ["src/csvreader", "*/csvreader/src/csvreader"]
+tests = ["tests", "*/csvreader/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
+
+[tool.black]
+line-length = 88
+exclude = "venv,build,dist,__pycache__,.git"
+
+[tool.isort]
+profile = "black"
