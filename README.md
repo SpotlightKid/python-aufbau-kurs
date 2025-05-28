@@ -11,7 +11,7 @@ Python Training für SoftEd
 
 * [Tag 1](tag_1.md)
 * [Tag 2](tag_2.md)
-* Tag 3 (noch nicht verfügbar)
+* [Tag 3](tag_3.md)
 
 Download / Git Checkout der Materialien:
 
