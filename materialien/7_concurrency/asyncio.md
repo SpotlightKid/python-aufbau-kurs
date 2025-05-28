@@ -111,21 +111,25 @@ if __name__ == "__main__":
 
 Hier sind drei Aufgaben, mit Hinweisen zur Lösung:
 
-### 1. **Speichere die heruntergeladenen Inhalte in Dateien**
+### 1. **Gib die HTTP-Statuscodes für jede heruntergeladene URL aus**
 
 *Hinweis:*  
-Schreibe in der Funktion `download_url` den Inhalt in eine Datei, z.B. `"output_<n>.html"`.
-Du kannst den Dateinamen aus der URL oder mittels einer Zählvariable ableiten.
+Greife auf das Attribut `response.status` im Kontext von `aiohttp` zu und gib es zusammen
+mit der URL aus.
 
-### 2. **Miss die Gesamtzeit aller Downloads und gib sie aus**
+---
 
-*Hinweis:*  
-Nutze das Modul `time` oder `asyncio.get_running_loop().time()`, um Zeit vor und nach
-dem Download zu messen.
-
-### 3. **Beschränke die Anzahl gleichzeitiger Downloads auf maximal 2**
+### 2. **Fasse die Gesamtzahl der erfolgreich geladenen Seiten zusammen und gib sie am Ende aus**
 
 *Hinweis:*  
-Verwende ein `asyncio.Semaphore`, indem du vor jedem Download `await semaphore.acquire()`
-aufrufst und nach dem Download `semaphore.release()` (am besten in einem `finally`-Block).
-Siehe [asyncio.Semaphore-Dokumentation](https://docs.python.org/3/library/asyncio-sync.html#asyncio.Semaphore).
+Zähle in der Funktion `download_url`, wie viele Antworten einen Statuscode im Bereich 200–299
+haben. Verwende z.B. eine gemeinsame Liste, ein asynchrones Queue-Objekt oder eine Rückgabe von
+`download_url`, die du mit `asyncio.gather` einsammelst.
+
+---
+
+### 3. **Füge einen Timeout für jede Anfrage hinzu, so dass keine einzelne Anfrage länger als 3 Sekunden dauert**
+
+*Hinweis:*  
+Verwende `asyncio.wait_for`, um einen Timeout für den Await-Ausdruck beim Download zu setzen.
+Siehe [asyncio.wait_for-Dokumentation](https://docs.python.org/3/library/asyncio-task.html#asyncio.wait_for).
